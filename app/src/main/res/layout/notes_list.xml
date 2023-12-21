@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <ImageView
-                android:id="@+id/image_View"
+                android:id="@+id/imageView_pin"
                 android:layout_alignParentEnd="true"
                 android:layout_width="20dp"
                 android:layout_height="20dp"/>
