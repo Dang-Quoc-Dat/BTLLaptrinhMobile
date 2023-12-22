@@ -8,41 +8,43 @@
     android:background="@color/black"
     tools:context=".NotesTakerActivity">
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_notes"
+        android:id="@+id/toolar_notes"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:id="@+id/imageView_save"
-                android:background="@android:color/transparent"
+                android:id="@+id/imageView_Save"
+                android:layout_alignParentEnd="true"
                 android:src="@drawable/ic_save"
                 android:padding="8dp"
-                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
                 android:layout_width="?attr/actionBarSize"
                 android:layout_height="?attr/actionBarSize"/>
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
     <EditText
         android:id="@+id/editText_title"
-        android:hint="Title: "
+        android:hint="title:"
         android:textColorHint="@color/white"
         android:padding="8dp"
         android:textStyle="bold"
         android:textSize="20sp"
-        android:singleLine="true"
         android:textColor="@color/white"
+        android:singleLine="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <EditText
         android:id="@+id/editText_notes"
-        android:layout_width="428dp"
-        android:layout_height="63dp"
-        android:hint="Add notes: "
-        android:padding="8dp"
+        android:hint="note: "
         android:textColorHint="@color/white"
+        android:padding="8dp"
+        android:textColor="@color/white"
         android:textSize="18sp"
-        android:textStyle="normal" />
+        android:textStyle="normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>
