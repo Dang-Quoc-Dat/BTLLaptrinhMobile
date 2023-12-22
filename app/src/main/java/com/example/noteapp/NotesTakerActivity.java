@@ -8,8 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.SimpleAdapter;
-
 import android.widget.Toast;
 
 import com.example.noteapp.Models.Notes;
@@ -18,11 +16,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class NotesTakerActivity extends AppCompatActivity {
-
-    EditText editText_title, editText_notes;
+    EditText   editText_title, editText_notes;
     ImageView imageView_save;
     Notes notes;
-
     boolean isOldNote = false;
 
     @Override
@@ -30,11 +26,9 @@ public class NotesTakerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes_taker);
 
-
         imageView_save = findViewById(R.id.imageView_Save);
         editText_title = findViewById(R.id.editText_title);
         editText_notes = findViewById(R.id.editText_notes);
-
 
         notes = new Notes();
         try {
@@ -45,35 +39,31 @@ public class NotesTakerActivity extends AppCompatActivity {
         }catch (Exception e){
             e.printStackTrace();
         }
+
         imageView_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String title = editText_title.getText().toString();
+                String description = editText_notes.getText().toString();
 
-                String descripton = editText_notes.getText().toString();
-
-                if (descripton.isEmpty()){
-                    Toast.makeText(NotesTakerActivity.this, "Please add some notes!", Toast.LENGTH_SHORT).show();
+                if (description.isEmpty()){
+                    Toast.makeText(NotesTakerActivity.this, "lam on an vao day!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                SimpleDateFormat formatter = new SimpleDateFormat("EEE, d MMM YYYY HH:mm a");
+                SimpleDateFormat formattter = new SimpleDateFormat("EEE , d MM YYYY HH:mm a");
                 Date date = new Date();
 
                 if (!isOldNote){
                     notes = new Notes();
                 }
-
-                notes = new Notes();
-
-                notes.setNotes(descripton);
                 notes.setTitle(title);
-                notes.setDate(formatter.format(date));
-
+                notes.setNotes(description);
+                notes.setDate(formattter.format(date));
 
                 Intent intent = new Intent();
                 intent.putExtra("note", notes);
-                setResult(Activity.RESULT_OK,intent);
+                setResult(Activity.RESULT_OK, intent);
                 finish();
             }
         });

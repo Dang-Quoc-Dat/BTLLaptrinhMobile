@@ -7,24 +7,21 @@
     android:orientation="vertical"
     android:background="@color/black"
     tools:context=".NotesTakerActivity">
-
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_notes"
+        android:id="@+id/toolar_notes"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <ImageView
                 android:id="@+id/imageView_Save"
-                android:layout_width="?attr/actionBarSize"
-                android:layout_height="?attr/actionBarSize"
                 android:layout_alignParentEnd="true"
-                android:background="@android:color/transparent"
+                android:src="@drawable/ic_save"
                 android:padding="8dp"
-                android:src="@drawable/ic_save" />
+                android:background="@android:color/transparent"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"/>
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
     <EditText
@@ -49,6 +46,5 @@
         android:textStyle="normal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
 
 </LinearLayout>

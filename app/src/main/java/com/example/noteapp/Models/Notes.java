@@ -16,13 +16,13 @@ public class Notes implements Serializable {
     String title = "";
 
     @ColumnInfo(name = "notes")
-    String notes = "";
+    String notes ="";
 
     @ColumnInfo(name = "date")
     String date = "";
 
     @ColumnInfo(name = "pinned")
-    Boolean pinned = false;
+    boolean pinned = false;
 
     public int getID() {
         return ID;
@@ -56,11 +56,11 @@ public class Notes implements Serializable {
         this.date = date;
     }
 
-    public Boolean getPinned() {
+    public boolean isPinned() {
         return pinned;
     }
 
-    public void setPinned(Boolean pinned) {
+    public void setPinned(boolean pinned) {
         this.pinned = pinned;
     }
 }
