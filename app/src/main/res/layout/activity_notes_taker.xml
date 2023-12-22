@@ -35,13 +35,14 @@
         android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
     <EditText
         android:id="@+id/editText_notes"
+        android:layout_width="428dp"
+        android:layout_height="63dp"
         android:hint="Add notes: "
-        android:textColorHint="@color/white"
         android:padding="8dp"
-        android:textStyle="normal"
+        android:textColorHint="@color/white"
         android:textSize="18sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:textStyle="normal" />
 </LinearLayout>
