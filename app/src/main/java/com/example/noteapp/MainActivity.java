@@ -1,5 +1,6 @@
 package com.example.noteapp;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -73,9 +74,10 @@ public class MainActivity extends AppCompatActivity {
     private final NotesClickListener notesClickListener = new NotesClickListener() {
         @Override
         public void onClick(Notes notes) {
-
+            Intent intent = new Intent(MainActivity.this,NotesTakerActivity.class);
+            intent.putExtra("old note", notes);
+            startActivityForResult(intent,102);
         }
-
         @Override
         public void onLongClick(Notes notes, CardView cardView) {
 
