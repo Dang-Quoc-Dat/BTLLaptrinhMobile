@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         fab_add = findViewById(R.id.fab_add);
         database = RoomDB.getInstance(this);
         notes = database.mainDAO().getAll();
-        String name = "dong anh";
 
         updateRecycler(notes);
 
